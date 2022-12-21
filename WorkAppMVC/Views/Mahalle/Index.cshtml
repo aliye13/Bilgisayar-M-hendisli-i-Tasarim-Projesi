@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WorkAppMVC.Models.Mahalle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+
+    <div class="row">
+        @Html.Action("PartialFiltre", "Home")
+
+        <!--İlan Listesi-->
+        <br />
+        <div class=" col-md-9">
+            <div class=" thumbnail" style=" width:845px;">
+
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Index">Admin Sayfası</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mahalle Listesi</li>
+                    </ol>
+                </nav>
+
+                <a class=" btn btn-primary btn-block" href=" @Url.Action("Create")">Mahalle Ekle</a>
+                <br />
+                <table class="table">
+                    <tr>
+                        <th>
+                            İlçe Adı
+                        </th>
+                        <th>
+                            Mahalle Adı
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ilce.IlceAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MahalleAd)
+                            </td>
+                            <td>
+                                <a class=" btn btn-primary" href="@Url.Action("Edit", new { id = item.MahalleId })">Düzenle</a>
+                                <a class=" btn btn-danger" href="@Url.Action("Delete", new { id = item.MahalleId })">Sil</a>
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WorkAppMVC.Models.Durum>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+
+    <div class="row">
+        @Html.Action("PartialFiltre", "Home")
+
+        <!--İlan Listesi-->
+        <br />
+        <div class=" col-md-9">
+            <div class=" thumbnail" style=" width:845px;">
+
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Index">Admin Sayfası</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Durum Listesi</li>
+                    </ol>
+                </nav>
+
+                <a class=" btn btn-primary btn-block" href=" @Url.Action("Create")">Durum Ekle</a>
+                <br />
+                <table class="table">
+                    <tr>
+                        <th>
+                            Durum Adı
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DurumAd)
+                            </td>
+                            <td>
+                                <a class=" btn btn-primary" href="@Url.Action("Edit", new { id = item.DurumId })">Düzenle</a>
+                                <a class=" btn btn-danger" href="@Url.Action("Delete", new { id = item.DurumId })">Sil</a>
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+

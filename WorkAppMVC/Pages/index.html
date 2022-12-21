@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>WorkApp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/Content/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <!--menü çubuğu-->
+        <div class=" container">
+            <br />
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style=" padding:15px" href="/Pages/index.html"><img src="/Content/images/worklogo.png" width=" 110" /></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Arama">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Ara</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-left">
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">GÜNLÜK <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">KAFE/RESTORAN</a></li>
+                                    <li><a href="#">TARLA/BAHÇE</a></li>
+                                    <li><a href="#">EV/OFİS</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">HAFTALIK <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">KAFE/RESTORAN</a></li>
+                                    <li><a href="#">TARLA/BAHÇE</a></li>
+                                    <li><a href="#">EV/OFİS</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#" style="color:white">Kullanıcı Adı</a></li>
+                            <li><a href="#" style="color:white">Profilim</a></li>
+                            <div class="nav navbar-nav navbar-right" style=" padding:10px">
+                                <a class=" btn btn-primary">Üye Ol</a>
+                                <a class=" btn btn-success">Giriş</a>
+                                <a class=" btn btn-info">İlan Ver</a>
+                            </div>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+        </div>
+        
+    </header>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                   <!-- Indicators -->
+                   <ol class="carousel-indicators">
+                       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                       <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                   </ol>
+
+                   <!-- Wrapper for slides -->
+                   <div class="carousel-inner" role="listbox">
+                       <div class="item active">
+                           <img src="/Content/images/timetowork.jpg" alt="..." style="width:1150px;height:400px;">
+
+                       </div>
+                       <div class="item">
+                           <img src="/Content/images/garson.jpg" alt="..."style="width:1150px;height:400px;">
+
+                       </div>
+                       <div class="item">
+                           <img src="/Content/images/çiftlik.jpg" alt="..."style="width:1150px;height:400px;">
+
+                       </div>
+                       <div class="item">
+                           <img src="/Content/images/ofis.png" alt="..."style="width:1150px;height:400px;">
+
+                       </div>
+
+                   </div>
+
+                   <!-- Controls -->
+                   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                   </a>
+                   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                       <span class="sr-only">Next</span>
+                   </a>
+               </div>
+
+           </div>
+           <!--Slider-->
+           
+       </div>
+       <div class="row">
+           <div class="col-md-3">
+               <br/>
+               <!--Filtreleme Kısmı-->
+               <form class="form-horizontal">
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">En Az</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="En Az(saatlik ücret)">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">En Çok</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="En Çok(saatlik ücret)">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">Şehir</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="Şehir">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">İlçe</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="İlçe">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">Mahalle</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="Mahalle">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">Çalışma Ortamı</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="Çalışma Ortamı">
+                       </div>
+                   </div>
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label">Yapılacak İş</label>
+                       <div class="col-sm-6">
+                           <input type="text" class="form-control" placeholder="Yapılacak iş">
+                       </div>
+                   </div>
+
+
+                   <div class="form-group ">
+                       <label for="inputEmail3" class="col-sm-4 control-label"></label>
+                       <div class="col-sm-6">
+                           <button type="submit" class="btn btn-primary btn-block">Filtreleme</button>
+                       </div>
+                   </div>
+               </form>
+           </div>
+           
+               <!--İlan Listesi-->
+           <br/>
+               <div class="col-sm-6 col-md-3">
+                   <div class="thumbnail">
+                       <img src="/Content/images/restaurant.jpg" style="height:300px;" alt="...">
+                       <div class="caption">
+                           <p><strong>İLAN DURUMU </strong>(ÇALIŞMA ORTAMI)</p>
+                           <p>Şehir-İlçe</p>
+                           <p>
+                               <button class="btn" style="background-color:#ff0000; color:white">Ücret</button>
+                               <button class="btn btn-primary">Görev</button>
+                               <button class="btn btn-success pull-right">Mola Süresi</button>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                   <div class="thumbnail">
+                       <img src="/Content/images/Tarla.jpg" style="height:300px;" alt="...">
+                       <div class="caption">
+                           <p><strong>İLAN DURUMU </strong>(ÇALIŞMA ORTAMI)</p>
+                           <p>Şehir-İlçe</p>
+                           <p>
+                               <button class="btn" style="background-color:#ff0000; color:white">Ücret</button>
+                               <button class="btn btn-primary">Görev</button>
+                               <button class="btn btn-success pull-right">Mola Süresi</button>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                   <div class="thumbnail">
+                       <img src="/Content/images/ofis4.jpg" style="height:300px;" alt="...">
+                       <div class="caption">
+                           <p><strong>İLAN DURUMU </strong>(ÇALIŞMA ORTAMI)</p>
+                           <p>Şehir-İlçe</p>
+                           <p>
+                               <button class="btn" style="background-color:#ff0000; color:white">Ücret</button>
+                               <button class="btn btn-primary">Görev</button>
+                               <button class="btn btn-success pull-right">Mola Süresi</button>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+          
+           
+       </div>
+   </div>
+    <footer>
+        <!--footer-->
+        <div class=" container">
+            <div class="row well" style="background-color:black">
+                <div class="col-md-9">
+                    <h5 class="text-uppercase" style="color:white">İLETİŞİM</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color:white">GİRİŞ</a></li>
+                        <li><a href="#" style="color:white">ÜYE OL</a></li>
+                        <li><a href="#" style="color:white">GÜNLÜK</a></li>
+                        <li><a href="#" style="color:white">HAFTALIK</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-uppercase" style="color:white">SOSYAL MEDYA</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color:white"> <img src="/Content/images/Facebook.jpg" width="50"/></a>
+                            <a href="#" style="color:white"> <img src="/Content/images/twitter.jpg" width="50" /></a>
+                            <a href="#" style="color:white"> <img src="/Content/images/instagram.jpg" width="50" /></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

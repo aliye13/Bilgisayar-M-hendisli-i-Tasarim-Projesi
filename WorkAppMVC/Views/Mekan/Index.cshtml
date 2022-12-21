@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WorkAppMVC.Models.Mekan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+
+    <div class="row">
+        @Html.Action("PartialFiltre", "Home")
+
+        <!--İlan Listesi-->
+        <br />
+        <div class=" col-md-9">
+            <div class=" thumbnail" style=" width:845px;">
+
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Admin/Index">Admin Sayfası</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mekan Listesi</li>
+                    </ol>
+                </nav>
+
+                <a class=" btn btn-primary btn-block" href=" @Url.Action("Create")">Mekan Ekle</a>
+                <br />
+                <table class="table">
+                    <tr>
+                        <th>
+                            Durum Adı
+                        </th>
+                        <th>
+                            Mekan Adı
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Durum.DurumAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MekanAd)
+                            </td>
+                            <td>
+                                <a class=" btn btn-primary" href="@Url.Action("Edit", new { id = item.MekanId })">Düzenle</a>
+                                <a class=" btn btn-danger" href="@Url.Action("Delete", new { id = item.MekanId })">Sil</a>
+
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+

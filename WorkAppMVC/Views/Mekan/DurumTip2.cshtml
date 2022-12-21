@@ -1,0 +1,7 @@
+﻿@model IEnumerable<WorkAppMVC.Models.Mekan>
+@foreach (var item in Model)
+{
+    <li><a href="/Home/MenuFiltre/@item.MekanId">@item.MekanAd</a></li>
+
+}
+

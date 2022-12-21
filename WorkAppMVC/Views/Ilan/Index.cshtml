@@ -1,0 +1,100 @@
+﻿@model IEnumerable<WorkAppMVC.Models.Ilan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+
+    <div class="row">
+        @Html.Action("PartialFiltre", "Home")
+
+        <!--İlan Listesi-->
+        <br />
+        <div class=" col-md-9">
+            <div class=" thumbnail" style=" width:845px;">
+
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/Home/Index">Anasayfa</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">İlan Listesi</li>
+                    </ol>
+                </nav>
+
+
+                <br />
+                <table class="table">
+                    <tr>
+                        <th>
+                            Mahalle
+                        </th>
+                        <th>
+                            Mekan
+                        </th>
+
+
+
+                        <th>
+                            Adres
+                        </th>
+
+                        <th>
+                            Şehir
+                        </th>
+                        <th>
+                            İlçe
+                        </th>
+                        <th>
+                            Durum
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.MahalleAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mekan.MekanAd)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Adres)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Ilce.Sehir.SehirAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mahalle.Ilce.IlceAd)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mekan.Durum.DurumAd)
+                            </td>
+                            <td>
+                                <a class=" btn btn-success" href="@Url.Action("Images", new { id = item.IlanId })">Resim Ekle</a>
+                                <a class=" btn btn-primary" href="@Url.Action("Edit", new { id = item.IlanId })">Düzenle</a>
+                                <a class=" btn btn-danger" href="@Url.Action("Delete", new { id = item.IlanId })">Sil</a>
+                            </td>
+
+                        </tr>
+                    }
+
+                </table>
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+

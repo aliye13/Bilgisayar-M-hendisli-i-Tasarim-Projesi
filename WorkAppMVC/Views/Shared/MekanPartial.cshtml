@@ -1,0 +1,9 @@
+﻿
+<option value="">Mekan Seç</option>
+@if (ViewBag.mekanlistesi != null) 
+{
+                foreach (var item in ViewBag.mekanlistesi)
+                {
+        <option value=" @item.Value">@item.Text</option>
+                }
+}

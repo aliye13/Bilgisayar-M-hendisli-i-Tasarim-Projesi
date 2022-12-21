@@ -1,0 +1,34 @@
+﻿@model WorkAppMVC.Models.Ilce
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ilce</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sehir.SehirAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sehir.SehirAd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IlceAd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IlceAd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IlceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

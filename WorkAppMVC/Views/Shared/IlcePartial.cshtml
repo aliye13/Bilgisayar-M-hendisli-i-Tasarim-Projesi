@@ -1,0 +1,8 @@
+﻿<option value="">İlçe Seç</option>
+@if (ViewBag.ilcelistesi!=null) 
+{ 
+    foreach(var item in ViewBag.ilcelistesi)
+                {
+                      <option value=" @item.Value">@item.Text</option>
+                }
+}
